@@ -14,17 +14,17 @@
 		<div id="CalendarCarousel" class="carousel slide" data-bs-theme="dark">
 			<!-- Indicator buttons on the bottom -->
 			<div class="carousel-indicators">
-				<button type="button" data-bs-target="#CalendarCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Mon"></button>
-				<button type="button" data-bs-target="#CalendarCarousel" data-bs-slide-to="1" aria-current="true" aria-label="Tue">
-				<button type="button" data-bs-target="#CalendarCarousel" data-bs-slide-to="2" aria-current="true" aria-label="Wed">
-				<button type="button" data-bs-target="#CalendarCarousel" data-bs-slide-to="3" aria-current="true" aria-label="Thr">
-				<button type="button" data-bs-target="#CalendarCarousel" data-bs-slide-to="4" aria-current="true" aria-label="Fri">
+				<button type="button" data-bs-target="#CalendarCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Monday"></button>
+				<button type="button" data-bs-target="#CalendarCarousel" data-bs-slide-to="1" aria-current="true" aria-label="Tuesday">
+				<button type="button" data-bs-target="#CalendarCarousel" data-bs-slide-to="2" aria-current="true" aria-label="Wednesday">
+				<button type="button" data-bs-target="#CalendarCarousel" data-bs-slide-to="3" aria-current="true" aria-label="Thursday">
+				<button type="button" data-bs-target="#CalendarCarousel" data-bs-slide-to="4" aria-current="true" aria-label="Friday">
 			</div>
 			
 			<div class="carousel-inner">
 			
 				<!-- The actual slides -->
-				<div class="carousel-item active">
+				<div class="carousel-item active" id="monSlide">
 					<div class="card" data-bs-theme="light">
 						<div class="card-body">
 							<h3 class="text-center">Monday</h1>
@@ -36,7 +36,7 @@
 					</div>
 				</div>
 				
-				<div class="carousel-item">
+				<div class="carousel-item" id="tueSlide">
 					<div class="card" data-bs-theme="light">
 						<div class="card-body">
 							<h3 class="text-center">Tuesday</h1>
@@ -47,7 +47,7 @@
 					</div>
 				</div>
 				
-				<div class="carousel-item">
+				<div class="carousel-item" id="wedSlide">
 					<div class="card" data-bs-theme="light">
 						<div class="card-body">
 							<h3 class="text-center">Wednesday</h1>
@@ -61,7 +61,7 @@
 					</div>
 				</div>
 				
-				<div class="carousel-item">
+				<div class="carousel-item" id="thuSlide">
 					<div class="card" data-bs-theme="light">
 						<div class="card-body">
 							<h3 class="text-center">Thursday</h1>
@@ -72,7 +72,7 @@
 					</div>
 				</div>
 				
-				<div class="carousel-item">
+				<div class="carousel-item" id="friSlide">
 					<div class="card" data-bs-theme="light">
 						<div class="card-body">
 							<h3 class="text-center">Friday</h1>
@@ -95,5 +95,35 @@
 			</button>
 			
 		</div>
+
+		<script>
+			// Make default active day change based on current day
+			var current = new Date(Date.now())
+			var day = current.getDay()
+			var caro = new bootstrap.Carousel(document.getElementById("CalendarCarousel"))
+			console.log(caro)
+			switch (day) {
+				// getDay starts the week on sunday, so 1 = mon, 2 = tues etc.
+				case 2:
+					caro.to(1)
+					break
+
+				case 3:
+					caro.to(2)
+					break
+
+				case 4:
+					caro.to(3)
+					break
+
+				case 5:
+					caro.to(4)
+					break
+
+				default:
+					// No need to do caro.to(0) as slide 0 is the default anyway
+					break
+			}
+		</script>
 	</body>
 </html>
