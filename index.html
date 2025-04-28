@@ -7,11 +7,14 @@
 
 	<body>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-		<div>
-			<h1>Welcome to Solenoid</h1>
+		<div class="border-bottom bg-success bg-gradient">
+			<h1 class="text-center">Welcome to Solenoid</h1>
 		</div>
 		
-		<div id="CalendarCarousel" class="carousel slide" data-bs-theme="dark">
+
+		<h3 class="text-center text-decoration-underline">Your Itinerary</h3>
+
+		<div id="CalendarCarousel" class="carousel slide">
 			<!-- Indicator buttons on the bottom -->
 			<div class="carousel-indicators">
 				<button type="button" data-bs-target="#CalendarCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Monday"></button>
@@ -21,23 +24,23 @@
 				<button type="button" data-bs-target="#CalendarCarousel" data-bs-slide-to="4" aria-current="true" aria-label="Friday">
 			</div>
 			
-			<div class="carousel-inner">
+			<div class="carousel-inner" data-bs-theme="dark">
 			
 				<!-- The actual slides -->
 				<div class="carousel-item active" id="monSlide">
-					<div class="card" data-bs-theme="light">
+					<div class="card" style="height:320px;">
 						<div class="card-body">
 							<h3 class="text-center">Monday</h1>
 							<p>10:00 - 13:00; Welcome to the School of Engineering, Computing and Mathematical Science, the University and the Faculty; MC001 </p>
 							<p>13:00 - 14:00; Break for lunch </p>
 							<p>14:00 - 16:00; Personal Tutoring arrangements, Academic Coaches and how to book appointments with staff; Introduction to Individual Learning Profile; Library Services Talk; MC001 </p>
-							<p>11:00 - 16:00; Freshers Fayre; City campus courtyard and Students' Union </p>
+							<p>11:00 - 16:00; Freshers Fayre; City campus courtyard and Students' Union</p>
 						</div>
 					</div>
 				</div>
 				
 				<div class="carousel-item" id="tueSlide">
-					<div class="card" data-bs-theme="light">
+					<div class="card" style="height:320px;">
 						<div class="card-body">
 							<h3 class="text-center">Tuesday</h1>
 							<p>10:00 - 12:00; Introduction to digital resources; Introduction to Students' Union and Student Voice; Follow Up Q&A; MI102c and be redirected to a room</p>
@@ -48,7 +51,7 @@
 				</div>
 				
 				<div class="carousel-item" id="wedSlide">
-					<div class="card" data-bs-theme="light">
+					<div class="card" style="height:320px;">
 						<div class="card-body">
 							<h3 class="text-center">Wednesday</h1>
 							<p>10:00 - 11:00; Learning at University; MC001</p>
@@ -62,7 +65,7 @@
 				</div>
 				
 				<div class="carousel-item" id="thuSlide">
-					<div class="card" data-bs-theme="light">
+					<div class="card" style="height:320px;">
 						<div class="card-body">
 							<h3 class="text-center">Thursday</h1>
 							<p>10:00 - 12:00; ILP and Internation Students catch-up; MI102c</p>
@@ -73,7 +76,7 @@
 				</div>
 				
 				<div class="carousel-item" id="friSlide">
-					<div class="card" data-bs-theme="light">
+					<div class="card" style="height:320px;">
 						<div class="card-body">
 							<h3 class="text-center">Friday</h1>
 							<p>10:00 - 15:30; Explore the campus and prepare to start next week</p>
